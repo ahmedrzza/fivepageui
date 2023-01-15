@@ -1,3 +1,5 @@
+// import 'dart:html';
+
 import 'package:firstui/screens/firstscreen.dart';
 import 'package:firstui/utils/allcolors.dart';
 import 'package:firstui/utils/alltext.dart';
@@ -31,7 +33,7 @@ class _LoginscreenState extends State<Loginscreen> {
   //   });
   // }
   // }
-
+  var x = 0;
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -45,7 +47,7 @@ class _LoginscreenState extends State<Loginscreen> {
               const Padding(
                 padding: const EdgeInsets.only(top: 80),
                 child: Image(
-                  image: AssetImage('assets/welcome.png'),
+                  image: AssetImage('assets/welcome2.png'),
                 ),
               ),
               const SizedBox(
@@ -119,23 +121,15 @@ class _LoginscreenState extends State<Loginscreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
-                      onTap: () {
-                        setState(
-                          () {
-                            Icon(
-                              Icons.done_outlined,
-                              color: allcolors.whitecolor,
-                            );
-                          },
-                        );
-                      },
+                      onTap: () {},
                       child: Container(
-                        height: 20,
-                        width: 20,
+                        height: 25,
+                        width: 25,
                         decoration: BoxDecoration(
                           color: allcolors.customcolor,
                           borderRadius: BorderRadius.circular(5),
                         ),
+                        // child: Text(),
                       ),
                     ),
                     const SizedBox(
