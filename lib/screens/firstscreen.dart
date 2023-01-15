@@ -177,113 +177,129 @@ class HomescreenFirst extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        Container(
-                          height: 300,
-                          width: 320,
-                          decoration: BoxDecoration(
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Homescreen(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            height: 300,
+                            width: 320,
+                            decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               color: allcolors.callcolor,
                               image: DecorationImage(
-                                  fit: BoxFit.contain,
-                                  image:
-                                      AssetImage('assets/orignalImage.jpg'))),
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                top: 200,
-                                child: Container(
-                                  height: 100,
-                                  width: 320,
-                                  decoration: BoxDecoration(
-                                    color: allcolors.blackcolor,
-                                    borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(20),
-                                      bottomRight: Radius.circular(20),
+                                fit: BoxFit.contain,
+                                image: AssetImage('assets/orignalImage.jpg'),
+                              ),
+                            ),
+                            child: Stack(
+                              children: [
+                                Positioned(
+                                  top: 200,
+                                  child: Container(
+                                    height: 100,
+                                    width: 320,
+                                    decoration: BoxDecoration(
+                                      color: allcolors.blackcolor,
+                                      borderRadius: BorderRadius.only(
+                                        bottomLeft: Radius.circular(20),
+                                        bottomRight: Radius.circular(20),
+                                      ),
+                                    ),
+                                    child: Column(
+                                      // mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 15, top: 20),
+                                          child: Text(
+                                            text.craftmanhouse,
+                                            style: TextStyle(
+                                                color: allcolors.whitecolor),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 15),
+                                          child: Text(
+                                            text.losangelis,
+                                            style: TextStyle(
+                                                color: allcolors.whitecolor),
+                                          ),
+                                        ),
+                                        Row(
+                                          children: [
+                                            Padding(
+                                              padding:
+                                                  EdgeInsets.only(left: 15),
+                                              child: Icon(
+                                                Icons.king_bed_sharp,
+                                                color: allcolors.iconcolor,
+                                                size: 30,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 0),
+                                              child: Text(
+                                                text.beds,
+                                                style: TextStyle(
+                                                    color:
+                                                        allcolors.whitecolor),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  EdgeInsets.only(left: 20),
+                                              child: Icon(
+                                                Icons.bathtub_rounded,
+                                                color: allcolors.iconcolor,
+                                                size: 30,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 0),
+                                              child: Text(
+                                                text.baths,
+                                                style: TextStyle(
+                                                    color:
+                                                        allcolors.whitecolor),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(left: 0),
+                                              child: Icon(
+                                                Icons.garage,
+                                                color: allcolors.iconcolor,
+                                                size: 30,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 0),
+                                              child: Text(
+                                                text.garage,
+                                                style: TextStyle(
+                                                    color:
+                                                        allcolors.whitecolor),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                  child: Column(
-                                    // mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 15, top: 20),
-                                        child: Text(
-                                          text.craftmanhouse,
-                                          style: TextStyle(
-                                              color: allcolors.whitecolor),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 15),
-                                        child: Text(
-                                          text.losangelis,
-                                          style: TextStyle(
-                                              color: allcolors.whitecolor),
-                                        ),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Padding(
-                                            padding: EdgeInsets.only(left: 15),
-                                            child: Icon(
-                                              Icons.king_bed_sharp,
-                                              color: allcolors.iconcolor,
-                                              size: 30,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                const EdgeInsets.only(left: 0),
-                                            child: Text(
-                                              text.beds,
-                                              style: TextStyle(
-                                                  color: allcolors.whitecolor),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(left: 20),
-                                            child: Icon(
-                                              Icons.bathtub_rounded,
-                                              color: allcolors.iconcolor,
-                                              size: 30,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                const EdgeInsets.only(left: 0),
-                                            child: Text(
-                                              text.baths,
-                                              style: TextStyle(
-                                                  color: allcolors.whitecolor),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(left: 0),
-                                            child: Icon(
-                                              Icons.garage,
-                                              color: allcolors.iconcolor,
-                                              size: 30,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                const EdgeInsets.only(left: 0),
-                                            child: Text(
-                                              text.garage,
-                                              style: TextStyle(
-                                                  color: allcolors.whitecolor),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              )
-                            ],
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -301,118 +317,106 @@ class HomescreenFirst extends StatelessWidget {
                     ),
                   ),
                 ),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Homescreen(),
-                      ),
-                    );
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 10, left: 20),
-                    child: Container(
-                      height: 120,
-                      width: 320,
-                      decoration: BoxDecoration(
-                        color: allcolors.containercolor,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Stack(
-                        children: [
-                          Container(
+                Padding(
+                  padding: const EdgeInsets.only(top: 10, left: 20),
+                  child: Container(
+                    height: 120,
+                    width: 320,
+                    decoration: BoxDecoration(
+                      color: allcolors.containercolor,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Stack(
+                      children: [
+                        Container(
+                          height: 120,
+                          width: 120,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Image(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/orignalImage2.png'),
+                          ),
+                        ),
+                        Positioned(
+                          left: 120,
+                          child: Container(
                             height: 120,
-                            width: 120,
+                            width: 200,
                             decoration: BoxDecoration(
+                              color: allcolors.containercolor,
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Image(
-                              fit: BoxFit.fill,
-                              image: AssetImage('assets/orignalImage2.png'),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 10, top: 30),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    text.ranch,
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w700,
+                                      color: allcolors.customcolor3,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    text.losangelis,
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400,
+                                      color: allcolors.customcolor3,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Icon(
+                                        Icons.king_bed_sharp,
+                                        color: allcolors.iconcolor,
+                                        size: 10,
+                                      ),
+                                      Text(
+                                        text.beds,
+                                        style: TextStyle(
+                                            color: allcolors.blackcolor),
+                                      ),
+                                      Icon(
+                                        Icons.bathtub_rounded,
+                                        color: allcolors.iconcolor,
+                                        size: 10,
+                                      ),
+                                      Text(
+                                        text.baths,
+                                        style: TextStyle(
+                                            color: allcolors.blackcolor),
+                                      ),
+                                      Icon(
+                                        Icons.garage,
+                                        color: allcolors.iconcolor,
+                                        size: 10,
+                                      ),
+                                      Text(
+                                        text.garage,
+                                        style: TextStyle(
+                                          color: allcolors.blackcolor,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                          Positioned(
-                            left: 120,
-                            child: Container(
-                              height: 120,
-                              width: 200,
-                              decoration: BoxDecoration(
-                                color: allcolors.containercolor,
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 10, top: 30),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      text.ranch,
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w700,
-                                        color: allcolors.customcolor3,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      text.losangelis,
-                                      style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.w400,
-                                        color: allcolors.customcolor3,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Icon(
-                                          Icons.king_bed_sharp,
-                                          color: allcolors.iconcolor,
-                                          size: 10,
-                                        ),
-                                        Text(
-                                          text.beds,
-                                          style: TextStyle(
-                                              color: allcolors.blackcolor),
-                                        ),
-                                        Icon(
-                                          Icons.bathtub_rounded,
-                                          color: allcolors.iconcolor,
-                                          size: 10,
-                                        ),
-                                        Text(
-                                          text.baths,
-                                          style: TextStyle(
-                                              color: allcolors.blackcolor),
-                                        ),
-                                        Icon(
-                                          Icons.garage,
-                                          color: allcolors.iconcolor,
-                                          size: 10,
-                                        ),
-                                        Text(
-                                          text.garage,
-                                          style: TextStyle(
-                                            color: allcolors.blackcolor,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
+                        )
+                      ],
                     ),
                   ),
                 ),
@@ -470,20 +474,7 @@ class HomescreenFirst extends StatelessWidget {
               ),
             )
           ],
-        )
-        //BottomAppBar(
-
-        // shape: .,
-
-        // color: allcolors.customcolor3,
-        // child: Row(
-        //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-        //   children: [
-
-        //     ),
-        //   ],
-        // ),
-        // ),
+        ),
         );
   }
 }
