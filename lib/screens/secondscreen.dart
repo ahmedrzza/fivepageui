@@ -12,8 +12,6 @@ class Homescreen extends StatefulWidget {
 class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -63,11 +61,10 @@ class _HomescreenState extends State<Homescreen> {
                 child: Container(
                   height: 311,
                   width: 320,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(
                       Radius.circular(20),
                     ),
-                    // image: AssetImage('assets/orignalImage.jpg')
                   ),
                   child: Image.asset('assets/orignalImage.jpg'),
                 ),
@@ -97,7 +94,7 @@ class _HomescreenState extends State<Homescreen> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: allcolors.containercolor),
-                      child: Icon(
+                      child: const Icon(
                         Icons.bookmark_border,
                         size: 28,
                       ),
@@ -108,7 +105,7 @@ class _HomescreenState extends State<Homescreen> {
               Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(left: 30),
+                    padding: const EdgeInsets.only(left: 30),
                     child: Icon(
                       Icons.king_bed_sharp,
                       color: allcolors.iconcolor,
@@ -120,7 +117,7 @@ class _HomescreenState extends State<Homescreen> {
                     child: Text(text.beds),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 20),
+                    padding: const EdgeInsets.only(left: 20),
                     child: Icon(
                       Icons.bathtub_rounded,
                       color: allcolors.iconcolor,
@@ -132,7 +129,7 @@ class _HomescreenState extends State<Homescreen> {
                     child: Text(text.baths),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 20),
+                    padding: const EdgeInsets.only(left: 20),
                     child: Icon(
                       Icons.garage,
                       color: allcolors.iconcolor,
@@ -149,8 +146,8 @@ class _HomescreenState extends State<Homescreen> {
                 padding: const EdgeInsets.only(left: 1, top: 10),
                 child: ListTile(
                   title: Text(text.ownername),
-                  leading: Padding(
-                    padding: const EdgeInsets.only(left: 10),
+                  leading: const Padding(
+                    padding:  EdgeInsets.only(left: 10),
                     child: CircleAvatar(
                         backgroundImage: AssetImage(
                           'assets/page1profile.png',
@@ -166,14 +163,14 @@ class _HomescreenState extends State<Homescreen> {
                         color: allcolors.callcolor),
                     child: Row(
                       children: [
-                        SizedBox(
+                      const  SizedBox(
                           width: 15,
                         ),
                         Icon(
                           Icons.call_rounded,
                           color: allcolors.whitecolor,
                         ),
-                        SizedBox(
+                       const SizedBox(
                           width: 5,
                         ),
                         Text(
@@ -193,7 +190,7 @@ class _HomescreenState extends State<Homescreen> {
                 padding: const EdgeInsets.only(left: 30, right: 10),
                 child: Text(text.decription),
               ),
-              SizedBox(
+             const SizedBox(
                 height: 10,
               ),
               Align(
@@ -222,11 +219,11 @@ class _HomescreenState extends State<Homescreen> {
                           // color: allcolors.bluecolor,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Image(
+                        child: const Image(
                           image: AssetImage('assets/page1-1.png'),
                         ),
                       ),
-                      SizedBox(
+                     const SizedBox(
                         width: 15,
                       ),
                       Container(
@@ -236,11 +233,11 @@ class _HomescreenState extends State<Homescreen> {
                           // color: allcolors.bluecolor,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Image(
+                        child: const Image(
                           image: AssetImage('assets/page1-2.png'),
                         ),
                       ),
-                      SizedBox(
+                    const  SizedBox(
                         width: 15,
                       ),
                       Container(
@@ -250,9 +247,9 @@ class _HomescreenState extends State<Homescreen> {
                           // color: allcolors.bluecolor,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Image(image: AssetImage('assets/page1-3.png')),
+                        child: const Image(image: AssetImage('assets/page1-3.png')),
                       ),
-                      SizedBox(
+                     const SizedBox(
                         width: 15,
                       ),
                       Container(
@@ -264,7 +261,7 @@ class _HomescreenState extends State<Homescreen> {
                         child: Center(
                           child: Stack(
                             children: [
-                              Image(
+                             const Image(
                                 image: AssetImage('assets/page1-3.png'),
                               ),
                               Positioned(
@@ -293,12 +290,12 @@ class _HomescreenState extends State<Homescreen> {
                   padding: const EdgeInsets.only(left: 30, top: 10),
                   child: Text(
                     text.pr,
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(top: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

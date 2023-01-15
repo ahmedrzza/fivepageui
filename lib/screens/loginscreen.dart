@@ -36,8 +36,6 @@ class _LoginscreenState extends State<Loginscreen> {
   var x = 0;
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -45,7 +43,7 @@ class _LoginscreenState extends State<Loginscreen> {
           child: Column(
             children: [
               const Padding(
-                padding: const EdgeInsets.only(top: 80),
+                padding:  EdgeInsets.only(top: 80),
                 child: Image(
                   image: AssetImage('assets/welcome2.png'),
                 ),
@@ -155,16 +153,13 @@ class _LoginscreenState extends State<Loginscreen> {
                 onPressed: () {
                   if (email.text == text.loginname &&
                       password.text == text.lgpas) {
-                    print(text.loginsucessful);
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => HomescreenFirst(),
+                        builder: (context) => const HomescreenFirst(),
                       ),
                     );
                   } else {
-                    print('login failed');
-
                     setState(() {
                       showMyDialogBox(context);
                     });
@@ -222,7 +217,7 @@ class _LoginscreenState extends State<Loginscreen> {
                       color: allcolors.whitecolor,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Center(
+                    child: const Center(
                         child: Image(
                       image: AssetImage('assets/google.png'),
                     )),
@@ -244,7 +239,7 @@ class _LoginscreenState extends State<Loginscreen> {
                   ),
                 ],
               ),
-              SizedBox(
+             const SizedBox(
                 height: 30,
               ),
               Row(

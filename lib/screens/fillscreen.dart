@@ -63,15 +63,15 @@ class _FillprofileScreenState extends State<FillprofileScreen> {
                 ],
               ),
             ),
-            SizedBox(
+           const SizedBox(
               height: 10,
             ),
             withouticon(fullname, text.full),
-            SizedBox(
+           const SizedBox(
               height: 10,
             ),
             withouticon(nickname, text.nick),
-            SizedBox(
+           const SizedBox(
               height: 10,
             ),
             withiconfunction(
@@ -81,7 +81,7 @@ class _FillprofileScreenState extends State<FillprofileScreen> {
                   color: allcolors.greyscolor,
                 ),
                 text.date),
-            SizedBox(
+           const SizedBox(
               height: 10,
             ),
             withiconfunction(
@@ -91,12 +91,12 @@ class _FillprofileScreenState extends State<FillprofileScreen> {
                   color: allcolors.greyscolor,
                 ),
                 text.emailhinttext),
-            SizedBox(
+           const SizedBox(
               height: 10,
             ),
             withiconfunction(
-                gender, Icon(Icons.arrow_drop_down_rounded), text.gender),
-            SizedBox(
+                gender, const Icon(Icons.arrow_drop_down_rounded), text.gender),
+           const SizedBox(
               height: 40,
             ),
             ElevatedButton(
@@ -106,8 +106,8 @@ class _FillprofileScreenState extends State<FillprofileScreen> {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: allcolors.customcolor,
                     foregroundColor: allcolors.whitecolor,
-                    shape: StadiumBorder(),
-                    minimumSize: Size(300, 50)),
+                    shape: const StadiumBorder(),
+                    minimumSize: const Size(300, 50)),
                 child: Text(text.continueonly))
           ],
         ),

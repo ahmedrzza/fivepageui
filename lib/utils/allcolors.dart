@@ -10,10 +10,10 @@ class allcolors {
   static Color grey700color = Colors.grey.shade700;
   static Color grey500color = Colors.grey.shade500;
   static Color grey800color = Colors.grey.shade800;
-  static Color callcolor = Color(0xff103144);
-  static Color customcolor3 = Color(0xff0F2F44);
-  static Color iconcolor = Color(0xffF5C945);
-  static Color descriptioncolor = Color(0xff0F2F4480);
-  static Color containercolor = Color(0xffEAF1FF);
-  static Color textcolor = Color(0xff0E3146);
+  static Color callcolor = const Color(0xff103144);
+  static Color customcolor3 = const Color(0xff0F2F44);
+  static Color iconcolor = const Color(0xffF5C945);
+  static Color descriptioncolor = const Color(0xff0F2F4480);
+  static Color containercolor = const Color(0xffEAF1FF);
+  static Color textcolor = const Color(0xff0E3146);
 }

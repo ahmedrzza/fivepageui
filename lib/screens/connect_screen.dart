@@ -8,8 +8,6 @@ class ConnectScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double Width = MediaQuery.of(context).size.width;
-    double Height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -157,7 +155,7 @@ class ConnectScreen extends StatelessWidget {
                     backgroundColor: allcolors.customcolor,
                     foregroundColor: allcolors.whitecolor,
                     shape: const StadiumBorder(),
-                    minimumSize: Size(300, 50)),
+                    minimumSize:const Size(300, 50)),
                 child: Text(text.signwithpassword),
               ),
               const SizedBox(

@@ -24,7 +24,7 @@ class _SplashscreenState extends State<Splashscreen> {
     );
   }
 
-  Widget build(BuildContext context) {
+  Widget  build(BuildContext context) {
     return const Scaffold(
       body: Center(
         child: Image(image: AssetImage('assets/welcome.png')),
